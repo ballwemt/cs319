@@ -1,6 +1,6 @@
 th {
    background-color:royalblue;
-    color:white
+    color:#fff;
 }
 th, tr{
     padding: 15px;
@@ -9,5 +9,5 @@ table{
     padding-bottom: 15px;
 }
 tr:nth-child(even){
-    background-color: #f2f2f2
+    background-color: #f0f0f0
 }
