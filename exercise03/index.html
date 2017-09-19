@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>unit 3 exercise</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <script>
+            function addnumbers() {
+              var x:
+              var y;
+              var answer;
+                
+              x = 13;
+              y = 7;
+              
+              answer = x + y;
+            document.getElementById("function").innerHTML =x + " plus " + y + " equals " + answer + "!";
+            }
+            function subtract () {
+              var x:
+              var y;
+              var answer;
+                
+              x = 13;
+              y = 7;
+              
+              answer = x - y;
+                document.getElementById("function").innerHTML =x + " minus " + y + " equals " + answer + "!";
+            }
+            
+            function Multiply () {
+              var x:
+              var y;
+              var answer;
+                
+              x = 13;
+              y = 7;
+              
+              answer = x * y;
+              document.getElementById("function").innerHTML =x + " times " + y + " equals " + answer + "!";                  
+            }
+            function divide () {
+              var x:
+              var y;
+              var answer;
+                
+              x = 13;
+              y = 7;
+              
+              answer = x / y;
+              document.getElementById("function").innerHTML =x + " divided by " + y + " equals " + answer + "!";
+            }
+        </script>
+        <p id="function"></p>
+        <form name="calculator" action="#" method="get">
+            <button type="input" id="add" onclick="addnumbers();" >Add</button>
+            <button type="input" onclick="subtract();">Subtract</button>
+            <button type="input" onclick="multiply();">Multiply</button>
+            <button type="input" onclick="divide();">Divide</button>
+        </form>
+  
+    </body>
+</html>
