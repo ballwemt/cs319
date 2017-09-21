@@ -6,18 +6,21 @@
     </head>
     <body>
     <script>
-            function addnumbers() {
+            function addNumbers() {
               var x:
               var y;
               var answer;
                 
               x = 13;
+              alet(x);
               y = 7;
+              alert(y);
               
               answer = x + y;
-            document.getElementById("function").innerHTML =x + " plus " + y + " equals " + answer + "!";
+              alert(answer);
+       document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + answer + "!";
             }
-            function subtract () {
+            function subtractNumbers() {
               var x:
               var y;
               var answer;
@@ -26,10 +29,10 @@
               y = 7;
               
               answer = x - y;
-                document.getElementById("function").innerHTML =x + " minus " + y + " equals " + answer + "!";
+              document.getElementById("equation").innerHTML =x + " minus " + y + " equals " + answer + "!";
             }
             
-            function Multiply () {
+            function multiplyNumbers() {
               var x:
               var y;
               var answer;
@@ -38,9 +41,9 @@
               y = 7;
               
               answer = x * y;
-              document.getElementById("function").innerHTML =x + " times " + y + " equals " + answer + "!";                  
+              document.getElementById("equation").innerHTML =x + " times " + y + " equals " + answer + "!";                  
             }
-            function divide () {
+            function divideNumbers() {
               var x:
               var y;
               var answer;
@@ -49,15 +52,16 @@
               y = 7;
               
               answer = x / y;
-              document.getElementById("function").innerHTML =x + " divided by " + y + " equals " + answer + "!";
+              document.getElementById("equation").innerHTML =x + " divided by " + y + " equals " + answer + "!";
             }
         </script>
-        <p id="function"></p>
+        <p id="equation"></p>
         <form name="calculator" action="#" method="get">
-            <button type="input" id="add" onclick="addnumbers();" >Add</button>
-            <button type="input" onclick="subtract();">Subtract</button>
-            <button type="input" onclick="multiply();">Multiply</button>
-            <button type="input" onclick="divide();">Divide</button>
+            <p><input type="button" id="addNumbers" name="addNumbers" value="Add" onclick="addNumbers();">
+            <input type="button" id="subtractnumbers" name="subtract" value="Subtract" onclick="subractNumbers();">
+            <input type="button" id="multiply" name="multiply" value="Multiply" onclick="multiplyNumbers();">
+            <input type="button" id="divide" name="divide" value="Divide" onclick="divideNumbers();">
+            </p>
         </form>
   
     </body>
