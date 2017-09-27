@@ -7,26 +7,27 @@
     <body>
         <script>
             function check(){
-                var name;
-                var number;
+                var name; 
+                var number; 
                 var color;
                 var animal;
+                var result;
                 
-                name=document.getElementById("nametext").value;
-                number=document.getElementById("numbertext").value;
-                color=document.story.color.value;
-                animal=document.getElementById("animalselect").value;
+                name = document.getElementById("nametext").value;
+                number = document.getElementById("numbertext").value;
+                color = document.story.color.value;
+                animal = document.story.animal.value;
                 
-                document.write("Hello, my name is " + name + " and i have " + number + " wonderful " + color + " " + animal + "!");
+                document.getElementById("words").innerHTML="Hello, my name is " + name + " and I have " + number + " wonderful " + color + " " + animal + "!";
             }
         </script>
         <form name="story" id="story">
             <p>Name:<input type="text" name="name" id="nametext"></p>
             <p>Number:<input type="number" name="number" id="numbertext"></p>
             <p>Color:<br>
-                <input type="radio" name="color" id="blackcolor" value="Black">Black<br>
-                 <input type="radio" name="color" id="whitecolor" value="White">White<br>
-                 <input type="radio" name="color" id="yellowcolor" value="Yellow">Yellow<br>
+                <input type="radio" name="color" id="blackcolor" value="black">Black<br>
+                 <input type="radio" name="color" id="whitecolor" value="white">White<br>
+                 <input type="radio" name="color" id="yellowcolor" value="yellow">Yellow<br>
             </p>
             <p>Animal (pluarl):<br>
             <select name="animal" id="animalselect">
@@ -35,7 +36,10 @@
                 <option value="fish">fish</option>
             </select> 
             </p>
-        <input type="submit" name="tellstory" id="tellstory" value="Tell Story!" onclick="check()">
+        <input type="button" name="go" id="go" value="Tell Story!" onclick="check()">
         </form>
+            <hr>
+            <p id="words"></p>
+        
     </body>
 </html>
