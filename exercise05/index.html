@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 05 </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function check(){
+                var month;
+                
+                
+                
+                month = document.getElementById("month").value;
+        
+                month = month.trim();
+                
+                
+                if (month == "1") {
+                    alert("January");
+                    return true;
+                } else if (month == "2")  {
+                    alert("February");
+                    return true;
+                } else if (month == "3")  {
+                    alert("March");
+                    return true;
+                }else if (month == "4")  {
+                    alert("April");
+                    return true;
+                }else if (month == "5")  {
+                    alert("May");
+                    return true;
+                }else if (month == "6")  {
+                    alert("June");
+                    return true;
+                }else if (month == "7")  {
+                    alert("July");
+                    return true;
+                }else if (month == "8")  {
+                    alert("August");
+                    return true;
+                }else if (month == "9")  {
+                    alert("September");
+                    return true;
+                }else if (month == "10")  {
+                    alert("October");
+                    return true;
+                }else if (month == "11")  {
+                    alert("November");
+                    return true;
+                }else if (month == "12")  {
+                    alert("December");
+                    return true;
+                }else {
+                    alert("I don't think that number corresponds to a month.")
+                    return false;
+                }
+                
+             
+            }
+        </script>
+        <form name="example" id="example" action="#" method="get" onsubmit="return check();">
+            <h1>Months</h1>
+            <p>Month Number: <input type="text" name="month" id = "month">
+            </p>
+            <p><input type="submit" name="go" id = "go" value = "Submit">
+            </p>
+        </form>
+
+    </body>
+</html>
