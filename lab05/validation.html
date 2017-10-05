@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Validate</title>
+        <script>
+                function formValidate(){
+                    //alert("");
+                    var fname;
+                    var lname;
+                    var email;
+                    
+                    fname = document.getElementById("fname").value;
+                    lname = document.getElementById("lname").value;
+                    email = document.getElementById("email").value;
+                    
+                    if (fname == ""){
+                        alert("The first name was not entered");
+                        return false;
+                    }
+                    else if (lname == ""){
+                        alert("The last name was not entered");
+                        return false;
+                    }
+                    else if (email == ""){
+                        alert("The email address was not entered");
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
+            }
+        </script>
+    </head>
+    <body>
+  
+        <form id="validate" name="validate" method="get" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" onsubmit="return formValidate();">
+            <p> First Name:
+                <input type="text" id="fname" name="fname"></p>
+            <p> Last Name:
+                <input type="text" id="lname" name="fname"></p>
+            <p> Email Address:    
+                <input type="text" id="email" name="fname"></p>
+            <input type="submit" id="val" name="val" value="Submit">
+        </from>
+    </body>
+</html>
