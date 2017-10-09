@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Temp Converter</title>
+        <script>
+            function tempConvert(){
+                //alert ();
+
+                if (document.getElementById("ftc").checked == true){
+                    var fartemp;
+                    var celtemp;
+                    
+                    fartemp = document.getElementById("fartemp").value;
+                    celtemp = ((fartemp - 32) * (5/9));
+                    
+                    document.temp.celtemp.value = celtemp;
+                
+                    document.getElementById("celtemp").style.backgroundColor = "LightGreen";
+                }
+                else if(document.getElementById("ctf").checked == true){
+                      var celtemp;
+                      var fartemp;
+                      
+                      celtemp = document.getElementById("celtemp").value;
+                      fartemp = ((celtemp * (9/5)) + 32);
+                
+                      document.temp.fartemp.value = fartemp;
+                
+                      document.getElementById("fartemp").style.backgroundColor = "LightGreen";
+               
+                }
+            }
+        </script>
+    </head>
+    <body>
+      <h1>Temperature Converter 2.0</h1>
+        
+        <form name="temp" action="#" method="get">
+            <p>Temperature in Fahrenheit:<br>
+            <input type="number" name="fartemp" id="fartemp"></p>
+            
+            <p>
+            <input type="radio" name="temp" id="ftc"> F to C<br>
+            <input type="radio" name="temp" id="ctf"> C to F
+            </p>
+            
+            <p>Temperature in Celsius:<br>
+            <input type="number" name="celtemp" id="celtemp"></p>
+            
+            <input type="button" name="submit" id="submit" value="convert" onclick="tempConvert();">
+        </form>
+    </body>
+</html>  

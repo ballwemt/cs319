@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Temp Converter</title>
+    </head>
+    <body>
+      
+          <script>
+            function FtoC() {
+                
+                var ftemp;
+                var ctemp;
+                
+                ftemp = parseFloat(document.temp.fartemp.value);
+                
+                ctemp = ((ftemp - 32) * (5/9))
+                
+                document.temp.celtemp.value = ctemp
+                
+                document.getElementById("celtemp").style.backgroundColor = "LightGreen";
+            }
+            function  CtoF() {
+                
+                var ftemp;
+                var ctemp;
+                
+                ctemp = parseFloat(document.temp.celtemp.value);
+                
+                ftemp = ((ctemp * (9/5)) + 32)
+                
+                document.temp.fartemp.value = ftemp
+                
+                document.getElementById("fartemp").style.backgroundColor = "LightGreen";
+            
+            }
+        </script>
+        
+        <form name="temp" action="#" method="get">
+            <p>Temperature in Fahrenheit:<br>
+            <input type="number" name="fartemp" id="fartemp"></p>
+            
+            
+            <p>
+            <input type="button" name="fartocel" id="ftc" value="F to C" onclick="FtoC();">
+            <input type="button" name="celtofar" id="ctf" value="C to F" onclick="CtoF();">
+            </p>
+            
+            <p>Temperature in Celsius:<br>
+            <input type="number" name="celtemp" id="celtemp"></p>
+        </form>
+    </body>
+</html>         
