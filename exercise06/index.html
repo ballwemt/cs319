@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 05 </title>
+        <meta charset="utf-8">
+                <script>
+            function check(){
+                alert ("")
+                var correct; 
+                var guess;
+                guess = document.getElementById("guess").value;
+                
+                if (guess.value.trim() == ""){
+                    alert ("nothing entered");
+                    guess.focus();
+                    return false;
+                }
+                else if (isNaN(guess.value.trim())== true){
+                    alert ("the guess is not a number");
+                    guess.select();
+                    return false;
+                }
+                else if (guess.value.trim() < 1 || guess.value.trim() > 10 ){
+                    alert("Your number is invalid");
+                    guess.select();
+                    return false;
+                }
+                else if (guess.value.trim() < 6){
+                    alert("try a larger number");
+                    return false;
+                }
+                else if (guess.value.trim() > 6){
+                    alert ("try a lower number");
+                    return false;
+                }
+                else (guess.value.trim() == 6){
+                    alert ("You guessed the correct number!");
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <form id="number" name="number" method="get" action="#" onsubmit="return check();">
+            <p>Guess the number! <input type="text" id="guess" name="guess"></p>
+            <input type="submit" name="go" id="go" value="guess">
+            
+        </form>
+    </body>
+</html>
