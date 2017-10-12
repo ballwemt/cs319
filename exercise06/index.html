@@ -4,49 +4,53 @@
     <head>
         <title>Exercise 05 </title>
         <meta charset="utf-8">
-                <script>
-            function check(){
-                alert ("")
-                var correct; 
-                var guess;
-                guess = document.getElementById("guess").value;
-                
-                if (guess.value.trim() == ""){
-                    alert ("nothing entered");
-                    guess.focus();
-                    return false;
-                }
-                else if (isNaN(guess.value.trim())== true){
-                    alert ("the guess is not a number");
-                    guess.select();
-                    return false;
-                }
-                else if (guess.value.trim() < 1 || guess.value.trim() > 10 ){
-                    alert("Your number is invalid");
-                    guess.select();
-                    return false;
-                }
-                else if (guess.value.trim() < 6){
-                    alert("try a larger number");
-                    return false;
-                }
-                else if (guess.value.trim() > 6){
-                    alert ("try a lower number");
-                    return false;
-                }
-                else (guess.value.trim() == 6){
-                    alert ("You guessed the correct number!");
-                    return true;
-                }
-            }
-        </script>
+
     </head>
     <body>
+                <script>
+                    function now() {
+                      alert ("test");
 
-        <form id="number" name="number" method="get" action="#" onsubmit="return check();">
+                    var correct; 
+                    var guess;
+
+                    guess = document.getElementById("guess").value;
+                    correct = 6;
+
+                    if (guess() == ""){
+                        alert ("nothing entered");
+                        document.number.guess.focus();
+                        return false;
+                    }
+                        else if (isNaN(guess== true){
+                        alert ("the guess is not a number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess < 1 || guess > 10 ){
+                        alert("Your number is invalid");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess < 6){
+                        alert("try a larger number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else if (guess > 6){
+                        alert ("try a lower number");
+                        document.number.guess.select();
+                        return false;
+                    }
+                        else (guess == 6){
+                        alert ("You guessed the correct number!");
+                        return true;
+                    }
+                    }
+        </script>
+        <form id="number" name="number" method="get" action="#" onsubmit="return now();">
             <p>Guess the number! <input type="text" id="guess" name="guess"></p>
             <input type="submit" name="go" id="go" value="guess">
-            
         </form>
     </body>
 </html>
